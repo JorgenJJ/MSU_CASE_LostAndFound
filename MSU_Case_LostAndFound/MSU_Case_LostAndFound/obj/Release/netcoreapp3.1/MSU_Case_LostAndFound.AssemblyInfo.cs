@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("4c24e395-606a-4188-b938-9aaaa13ff0f0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MSU_Case_LostAndFound")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
