@@ -90,4 +90,10 @@ body {
 
 .ar-2-1 {
     padding-top: 26%;
+    padding-top: 13%;
+    padding-bottom: 13%;
+}
+
+.text-size {
+    font-size: 30px;
 }
