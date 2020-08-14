@@ -21,7 +21,6 @@ C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\
 C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\MSU_Case_LostAndFound.RazorCoreGenerate.cache
 C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
-C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
@@ -72,3 +71,4 @@ C:\Users\patrick.grove\Source\Repos\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\
 C:\Users\patrick.grove\Source\Repos\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\MSU_Case_LostAndFound.pdb
 C:\Users\patrick.grove\Source\Repos\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\MSU_Case_LostAndFound.genruntimeconfig.cache
 C:\Users\patrick.grove\Source\Repos\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\MSU_Case_LostAndFound.csproj.CopyComplete
+C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\Razor\Pages\Lost.cshtml.g.cs
