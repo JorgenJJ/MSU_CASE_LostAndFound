@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSU_Case_LostAndFound", "MSU_Case_LostAndFound\MSU_Case_LostAndFound.csproj", "{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "..\..\..\..\Desktop\Domain\Domain.csproj", "{62DD1A88-62D4-4152-987A-5B413BF069C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DD1A88-62D4-4152-987A-5B413BF069C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DD1A88-62D4-4152-987A-5B413BF069C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DD1A88-62D4-4152-987A-5B413BF069C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DD1A88-62D4-4152-987A-5B413BF069C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
