@@ -8,11 +8,11 @@ using Microsoft.Extensions.Logging;
 
 namespace MSU_Case_LostAndFound.Pages
 {
-    public class PrivacyModel : PageModel
+    public class LostModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<LostModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public LostModel(ILogger<LostModel> logger)
         {
             _logger = logger;
         }
