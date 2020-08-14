@@ -14,7 +14,7 @@ namespace Domain.Repositories
             private static IList<Animals> items = new List<Animals> {
             new Animals { Id=1, Name="Buddy", Lost=DateTime.Today },
             new Animals { Id=2, Name="Heinz", Lost=DateTime.Today },
-            new Animals { Id=3, Name="Lucy",      Lost=DateTime.Today },
+            new Animals { Id=3, Name="Tomato",      Lost=DateTime.Today },
             new Animals { Id=4, Name="Alex",       Lost=DateTime.Today },
             new Animals { Id=5, Name="Sugar",            Lost=DateTime.Today },
             new Animals { Id=6, Name="Erik van Appeldorn", Lost=DateTime.Today },
