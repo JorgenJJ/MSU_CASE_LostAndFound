@@ -6,8 +6,7 @@ using System.Text;
 
 namespace Domain.Repositories
 {
-    class MemoryAnimal
-    {
+  
         public class MemoryAnimalRepository : IAnimalsRepository
         {
             // Dummy (hard-coded) list of product suggestions to start with.
@@ -97,5 +96,5 @@ namespace Domain.Repositories
 
             #endregion
         }
-    }
+
 }

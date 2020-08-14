@@ -3,6 +3,18 @@
 @{
     ViewData["Title"] = "Dyr som er savnet";
 }
+
+@section Scripts {
+    <script src="~/js/ProductSuggestionsIndex.js"></script>
+}
+
 <h1>@ViewData["Title"]</h1>
 
 <p>Test</p>
+
+<fieldset>
+    <legend>Product suggestions search</legend>
+    <input type="text" id="partialDescription" placeholder="search string" onkeyup="getProductSuggestionLike('#resultList2', '#partialDescription')" />
+    <br />
+    <ul id="resultList2"></ul>
+</fieldset>
