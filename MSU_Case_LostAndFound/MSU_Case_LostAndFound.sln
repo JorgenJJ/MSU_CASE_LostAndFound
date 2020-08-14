@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSU_Case_LostAndFound", "MSU_Case_LostAndFound\MSU_Case_LostAndFound.csproj", "{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {796196B5-8BE2-4AAF-8042-F23989937F89}
+	EndGlobalSection
+EndGlobal
