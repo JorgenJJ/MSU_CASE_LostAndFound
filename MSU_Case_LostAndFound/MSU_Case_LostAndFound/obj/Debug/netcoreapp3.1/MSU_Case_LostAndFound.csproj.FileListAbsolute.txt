@@ -35,3 +35,5 @@ C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\
 C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\MSU_Case_LostAndFound.pdb
 C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\MSU_Case_LostAndFound.genruntimeconfig.cache
 C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\MSU_Case_LostAndFound.csproj.CopyComplete
+C:\Users\agrefslie\Source\Repos\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\MSU_Case_LostAndFound.dll
+C:\Users\agrefslie\Source\Repos\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\MSU_Case_LostAndFound\obj\Debug\netcoreapp3.1\MSU_Case_LostAndFound.pdb
