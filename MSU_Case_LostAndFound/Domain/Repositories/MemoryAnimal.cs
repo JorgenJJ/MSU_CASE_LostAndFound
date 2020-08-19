@@ -17,7 +17,7 @@ namespace Domain.Repositories
             new Animals { Id=3, Name="Tomato",      Lost=DateTime.Today },
             new Animals { Id=4, Name="Alex",       Lost=DateTime.Today },
             new Animals { Id=5, Name="Sugar",            Lost=DateTime.Today },
-            new Animals { Id=6, Name="Erik van Appeldorn", Lost=DateTime.Today },
+            new Animals { Id=6, Name="Erik van Appeldoorn", Lost=DateTime.Today },
             new Animals { Id=7, Name="Leo",    Lost=DateTime.Today },
             new Animals { Id=8, Name="Alexis",     Lost=DateTime.Today },
         };
