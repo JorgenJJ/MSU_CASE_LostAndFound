@@ -1,0 +1,4 @@
+C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\Domain\obj\Release\netcoreapp3.1\Domain.csprojAssemblyReference.cache
+C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\Domain\obj\Release\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\Domain\obj\Release\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Users\jjarnes\OneDrive - Communicate Norge AS\MSU\Case\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\Domain\obj\Release\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
