@@ -1,3 +1,0 @@
-C:\Users\patrick.grove\Source\Repos\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
-C:\Users\patrick.grove\Source\Repos\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
-C:\Users\patrick.grove\Source\Repos\MSU_CASE_LostAndFound\MSU_Case_LostAndFound\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
