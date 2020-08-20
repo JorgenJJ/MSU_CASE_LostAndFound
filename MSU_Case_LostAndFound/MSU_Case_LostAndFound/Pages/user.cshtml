@@ -3,16 +3,16 @@
 @model LostModel
 @{
     ViewData["Title"] = "Dyr som er savnet";
-    var userinfo = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
-    //var username = Context.User.Identity.Name;
+    //var userinfo = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
+    var username = HttpContext.User.Identity.Name;
 }
 
 
 <h1>@ViewData["Title"]</h1>
-@if (userinfo != null)
+@if (username != null)
 {
 
-    <p>@userinfo</p>
+    <p>@username</p>
 
 }
 else
