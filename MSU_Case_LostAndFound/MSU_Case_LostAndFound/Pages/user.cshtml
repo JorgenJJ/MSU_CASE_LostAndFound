@@ -3,7 +3,7 @@
 @model LostModel
 @{
     ViewData["Title"] = "Dyr som er savnet";
-    var userinfo = HttpContext.User;
+    var userinfo = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 }
 
 

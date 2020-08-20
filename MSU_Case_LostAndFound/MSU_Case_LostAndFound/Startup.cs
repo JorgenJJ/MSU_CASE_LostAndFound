@@ -28,6 +28,8 @@ namespace MSU_Case_LostAndFound
                 CertificateAuthenticationDefaults.AuthenticationScheme)
                 .AddCertificate();
 
+            services.AddHttpContextAccessor()
+
             services.AddRazorPages();
 
 
