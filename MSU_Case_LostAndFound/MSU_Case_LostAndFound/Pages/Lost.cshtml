@@ -8,12 +8,16 @@
 
 
 <h1>@ViewData["Title"]</h1>
-@if(userinfo != null) { 
-
-<p>@userinfo</p>
-
-} else
+@if (userinfo != null)
 {
-<p>No active user</p>
+
+    <p>@userinfo</p>
+
+}
+else
+{
+   
+  <p>No active user</p>
+    
 }
 
