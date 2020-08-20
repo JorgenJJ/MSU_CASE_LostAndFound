@@ -1,8 +1,10 @@
 ﻿@page
+@using System.Security.Claims;
 @model LostModel
 @{
     ViewData["Title"] = "Dyr som er savnet";
+    var userinfo = ClaimsPrincipal.Current.Claims;
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Test</p>
+<p>@userinfo</p>
