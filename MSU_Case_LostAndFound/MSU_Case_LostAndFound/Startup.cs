@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MaximeRouiller.Azure.AppService.EasyAuth;
 
 namespace MSU_Case_LostAndFound
 {
@@ -28,8 +29,9 @@ namespace MSU_Case_LostAndFound
                 CertificateAuthenticationDefaults.AuthenticationScheme)
                 .AddCertificate();
 
-            services.AddHttpContextAccessor();
-            
+
+            services.AddAuthentication().AddEasyAuthAuthentication((o) => { });
+
             services.AddRazorPages();
 
 
