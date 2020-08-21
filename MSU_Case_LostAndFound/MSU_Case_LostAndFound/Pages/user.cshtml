@@ -1,9 +1,10 @@
 ﻿@page
 @model LostModel
+@using System.Security.Claims
 @{
     ViewData["Title"] = "Profile";
 
-    var username = HttpContext.User.Identity.Name;
+    var username = ClaimsPrincipal.Current.Identities;
 }
 
 
