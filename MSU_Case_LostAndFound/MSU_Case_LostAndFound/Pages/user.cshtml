@@ -5,11 +5,12 @@
     ViewData["Title"] = "Profile";
 
     var username = ClaimsPrincipal.Current.Identities;
+    var brukerNavn = User.FindFirstValue(ClaimTypes.Name);
 }
 
 
 <h1>@ViewData["Title"]</h1>
 
- <p>@username</p>
+ <p>@brukerNavn</p>
 
 
