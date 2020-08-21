@@ -1,5 +1,4 @@
 ﻿@page
-@using System.Security.Claims;
 @model LostModel
 @{
     ViewData["Title"] = "Profile";
@@ -9,16 +8,7 @@
 
 
 <h1>@ViewData["Title"]</h1>
-@if (username != null)
-{
 
-    <p>@username</p>
+ <p>@username</p>
 
-}
-else
-{
-   
-  <p>No active user</p>
-    
-}
 
