@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -18,6 +19,7 @@ namespace MSU_Case_LostAndFound
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+        
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

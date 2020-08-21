@@ -29,7 +29,7 @@ namespace MSU_Case_LostAndFound
                 .AddCertificate();
 
             services.AddHttpContextAccessor();
-
+            
             services.AddRazorPages();
 
 
