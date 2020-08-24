@@ -6,11 +6,20 @@
 
     var claim = ClaimsPrincipal.Current;
     var username = claim.FindFirst(ClaimTypes.NameIdentifier);
-}
 
+}
 
 <h1>@ViewData["Title"]</h1>
 
- <p>@username</p>
+@{ if (claim != null)
+    {
+        <p>@username</p>
+    } else
+    {
+        <p>No active user...</p>
+    }
+
+}
+
 
 
