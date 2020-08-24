@@ -4,9 +4,8 @@
 @{
     ViewData["Title"] = "Profile";
 
-
-    var claimP = ClaimsPrincipal.Current;
-    var username = claimP.FindFirst(ClaimTypes.Name);
+    var claim = ClaimsPrincipal.Current;
+    var username = claim.FindFirst(ClaimTypes.NameIdentifier);
 }
 
 
