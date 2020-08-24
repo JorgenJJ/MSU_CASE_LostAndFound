@@ -102,3 +102,10 @@ body {
 .text-size {
     font-size: 30px;
 }
+
+#animal-picture {
+    height: 50%;
+    width: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
