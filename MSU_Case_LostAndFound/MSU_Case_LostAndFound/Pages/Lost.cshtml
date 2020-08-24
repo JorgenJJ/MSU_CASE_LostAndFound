@@ -9,7 +9,17 @@
 
     int itemsRemaining = totalItems;
 }
-<h1>@ViewData["Title"]</h1>
+
+<div class="w-100 d-flex flex-row">
+    <div class="w-50">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <div class="w-50 d-flex justify-content-end align-content-end">
+        <a asp-area="" asp-page="/NewAnimal">
+            <div class="btn btn-primary">Ny annonse</div>
+        </a>
+    </div>
+</div>
 
 @for (int i = 0; i < totalItems; i++)
 {
