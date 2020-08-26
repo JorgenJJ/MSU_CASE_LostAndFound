@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MSU_Case_LostAndFound",
+    "\\MSU_Case_LostAndFound\\Domain"
   ],
+  "SelectedNode": "\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.sln",
   "PreviewInSolutionExplorer": false
 }
