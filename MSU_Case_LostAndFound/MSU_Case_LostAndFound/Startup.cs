@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MaximeRouiller.Azure.AppService.EasyAuth;
+using Microsoft.Data.SqlClient;
 
 namespace MSU_Case_LostAndFound
 {
@@ -26,12 +27,7 @@ namespace MSU_Case_LostAndFound
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //services.AddAuthentication().AddEasyAuthAuthentication((o) => { });
-
             services.AddRazorPages();
-
-            services.AddRazorPages();
-
 
         }
 
@@ -55,11 +51,14 @@ namespace MSU_Case_LostAndFound
             app.UseRouting();
 
             app.UseAuthentication();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id}");
+
                 endpoints.MapRazorPages();
             });
         }
