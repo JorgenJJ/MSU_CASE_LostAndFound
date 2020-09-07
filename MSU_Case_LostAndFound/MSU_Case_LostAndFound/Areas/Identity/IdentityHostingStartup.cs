@@ -20,7 +20,12 @@ namespace MSU_Case_LostAndFound.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("AuthDbContextConnection")));
 
-                services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<ApplicationUser>(options => {
+                    options.SignIn.RequireConfirmedAccount = false;
+                    options.Password.RequiredUniqueChars = 0;
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequireLowercase = false;
+                })
                     .AddEntityFrameworkStores<AuthDbContext>();
             });
         }
