@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSU_Case_LostAndFound", "MSU_Case_LostAndFound\MSU_Case_LostAndFound.csproj", "{75C09F7C-F36C-4FCF-8372-60FBFDB32F90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F3F54D7E-7B07-49C2-9F94-F9BF211EC463}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{F3F54D7E-7B07-49C2-9F94-F9BF211EC463}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

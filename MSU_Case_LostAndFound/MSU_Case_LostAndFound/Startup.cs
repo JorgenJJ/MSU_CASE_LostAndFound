@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MaximeRouiller.Azure.AppService.EasyAuth;
 using Microsoft.Data.SqlClient;
+using MSU_Case_LostAndFound.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace MSU_Case_LostAndFound
 {
@@ -26,10 +28,11 @@ namespace MSU_Case_LostAndFound
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("AnimalContextConnection")));
             services.AddRazorPages();
 
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
