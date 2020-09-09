@@ -5,20 +5,39 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using MSU_Case_LostAndFound.Models;
 
 namespace MSU_Case_LostAndFound.Pages
 {
     public class LostModel : PageModel
     {
-        private readonly ILogger<LostModel> _logger;
+        private readonly RescuteDBContext _db;
 
-        public LostModel(ILogger<LostModel> logger)
+        public LostModel(RescuteDBContext db)
         {
-            _logger = logger;
+            _db = db;
         }
 
+        [BindProperty]
+        public AnimalsLost AnimalsLost { get; set; }
         public void OnGet()
         {
+
+        }
+
+        public async Task<IActionResult> OnPost()
+        {
+            if (ModelState.IsValid)
+            {
+                await _db.AnimalsLost.AddAsync(AnimalsLost);
+                await _db.SaveChangesAsync();
+                return RedirectToPage("Lost");
+
+            }
+            else
+            {
+                return Page();
+            }
         }
     }
 }

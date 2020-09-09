@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MaximeRouiller.Azure.AppService.EasyAuth;
 using Microsoft.Data.SqlClient;
+using MSU_Case_LostAndFound.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MSU_Case_LostAndFound
 {
@@ -27,7 +29,8 @@ namespace MSU_Case_LostAndFound
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddRazorPages();
+            services.AddDbContext<RescuteDBContext>(option => option.UseSqlServer(Configuration.GetConnectionString("RescuteContextConnection")));
+            services.AddRazorPages(); ;
 
         }
 
