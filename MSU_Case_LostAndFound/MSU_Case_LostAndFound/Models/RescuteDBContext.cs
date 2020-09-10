@@ -30,10 +30,7 @@ namespace MSU_Case_LostAndFound.Models
         {
             modelBuilder.Entity<AnimalsLost>(entity =>
             {
-                entity.HasKey(e => e.AnimalId)
-                    .HasName("PK__AnimalsL__A21A73071704C2C5");
-
-                entity.Property(e => e.AnimalId).ValueGeneratedNever();
+                entity.HasKey(e => e.AnimalId);
 
                 entity.Property(e => e.Animal)
                     .IsRequired()
@@ -59,8 +56,8 @@ namespace MSU_Case_LostAndFound.Models
 
                 entity.Property(e => e.History).HasColumnType("ntext");
 
-                entity.Property(e => e.Image)
-                    .HasMaxLength(1)
+                entity.Property(e => e.ImageUrl)
+                    .HasMaxLength(200)
                     .IsUnicode(false);
 
                 entity.Property(e => e.LostDate).HasColumnType("datetime");

@@ -13,20 +13,17 @@ namespace MSU_Case_LostAndFound.Models
         public DateTime? Updated { get; set; }
         public string NearArea { get; set; }
         public string History { get; set; }
-        public string Image { get; set; }
         public string Color { get; set; }
         public string FurLenght { get; set; }
         public string FurPattern { get; set; }
         public string Description { get; set; }
+        public string ImageUrl { get; set; }
     }
 
     public enum Animal
     {
         Cat, 
-        Dog, 
-        Rabbit,
-        Parrot,
-        Other
+        Dog
     }
 
     public enum Gender

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "KRkz1oWCXClgzkEg3ZA1D/4BlJkGJXizzKdgAkNAa3HO+yQLt3eZB3oMOGgyscSHiqlBwGW0zoIk3+tAcnrH1w==",
+  "dgSpecHash": "yg79cvfLFFoe/0Ns9Avg5gGRJYxf07ufeOkDzOIAAYAhB5+qnFO5YCGxA3T6M1fgX2q50Hb+Y/wquRluO95b7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\patrick.grove\\.nuget\\packages\\azure.core\\1.4.1\\azure.core.1.4.1.nupkg.sha512",
+    "C:\\Users\\patrick.grove\\.nuget\\packages\\azure.storage.blobs\\12.6.0\\azure.storage.blobs.12.6.0.nupkg.sha512",
+    "C:\\Users\\patrick.grove\\.nuget\\packages\\azure.storage.common\\12.5.2\\azure.storage.common.12.5.2.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\maximerouiller.azure.appservice.easyauth\\1.0.0-ci141\\maximerouiller.azure.appservice.easyauth.1.0.0-ci141.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
@@ -137,6 +140,7 @@
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\patrick.grove\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
@@ -177,6 +181,7 @@
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\patrick.grove\\.nuget\\packages\\system.text.json\\4.6.0\\system.text.json.4.6.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
@@ -185,7 +190,8 @@
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\patrick.grove\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\patrick.grove\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\patrick.grove\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\patrick.grove\\.nuget\\packages\\windowsazure.storage\\9.3.3\\windowsazure.storage.9.3.3.nupkg.sha512"
   ],
   "logs": []
 }
