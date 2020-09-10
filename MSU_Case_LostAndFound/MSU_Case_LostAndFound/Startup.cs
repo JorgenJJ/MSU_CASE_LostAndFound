@@ -30,14 +30,14 @@ namespace MSU_Case_LostAndFound
             services.AddRazorPages();
 
             services.AddAuthentication()
-            .AddGoogle(options =>
+            /*.AddGoogle(options =>
             {
                 IConfigurationSection googleAuthNSection =
                     Configuration.GetSection("Authentication:Google");
 
                 options.ClientId = googleAuthNSection["ClientId"];
                 options.ClientSecret = googleAuthNSection["ClientSecret"];
-            })
+            })*/
             .AddFacebook(facebookOptions =>
             {
                 facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
