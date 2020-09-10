@@ -1,0 +1,101 @@
+﻿@page
+@model LostModel
+@{
+    ViewData["Title"] = "Dyr som er savnet";
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+<br />
+<h2 class="text-info">Register Animal</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="AnimalsLost.Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="AnimalsLost.Name" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="AnimalsLost.Animal"></label>
+            </div>
+            <div class="col-6">
+                <select asp-for="AnimalsLost.Animal" class="custom-select mr-sm-2"
+                        asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Models.Animal>()">
+                    <option value="">Please Select</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="AnimalsLost.Gender"></label>
+            </div>
+            <div class="col-6">
+                <select asp-for="AnimalsLost.Gender" class="custom-select mr-sm-2"
+                        asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Models.Gender>()">
+                    <option value="">Please Select</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="AnimalsLost.LostDate"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="AnimalsLost.LostDate" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="AnimalsLost.NearArea"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="AnimalsLost.NearArea" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="AnimalsLost.Color"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="AnimalsLost.Color" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="AnimalsLost.FurLenght"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="AnimalsLost.FurLenght" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="AnimalsLost.FurPattern"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="AnimalsLost.FurPattern" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3 offset-4">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+        </div>
+    </form>
+</div>
+
