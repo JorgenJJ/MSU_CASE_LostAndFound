@@ -4,10 +4,10 @@
     ViewData["Title"] = "Dyr som er savnet";
 
 
-    int totalItems = 18;
+    int totalItems = Model.AnimalLst.Count();
     int itemsPerRow = 3;
 
-    int itemsRemaining = totalItems;
+    int counter = -1;
 }
 
 <div class="w-100 d-flex flex-row">
@@ -21,33 +21,37 @@
     </div>
 </div>
 
-@for (int i = 0; i < totalItems; i++)
-{
-    if (itemsRemaining < itemsPerRow) itemsPerRow = itemsRemaining;
-    itemsRemaining -= itemsPerRow;
-    <div class="w-100 d-flex flex-row justify-content-between">
-    @for (int j = 0; j < itemsPerRow; j++)
+<div class="w-100 d-flex flex-row justify-content-between">
+    @foreach (var item in Model.AnimalLst)
     {
+        Console.WriteLine(item.Name);
+        counter++;
+
+        @if (counter % 3 == 0)
+        {
+            Console.WriteLine("Line swap");
+            @:</div><div class="w-100 d-flex flex-row justify-content-between">
+        }
+
         <div class="w-25 border p-2 mb-2 d-flex flex-row">
             <div class="w-50 mr-1">
                 <!--<p>picture</p>-->
-                <img src="~/images/cat_in_grass.jpg" id="animal-picture" class="img-fluid ar-1-1"/>
+                <img src="~/images/cat_in_grass.jpg" id="animal-picture" class="img-fluid ar-1-1" />
             </div>
             <div class="w-50 d-flex flex-column">
                 <div>
-                    Name
+                    @item.Name
                 </div>
                 <div>
-                    Location
+                    @item.Sex
                 </div>
                 <div>
                     <a asp-area="" asp-page="/Index">
-                        <div class="btn btn-warning">Se mer</div>
+                        <div class="btn btn-primary">Se mer</div>
                     </a>
                 </div>
             </div>
         </div>
     }
-    </div>
-}
+</div>
 

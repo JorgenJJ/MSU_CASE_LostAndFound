@@ -12,8 +12,9 @@ namespace MSU_Case_LostAndFound.Pages
 {
     public class LostModel : PageModel
     {
-        private readonly ApplicationDbContext _db;
+        public IEnumerable<Animal> AnimalLst { get; set; }
 
+        private readonly ApplicationDbContext _db;
         public LostModel(ApplicationDbContext db)
         {
             _db = db;
@@ -21,9 +22,9 @@ namespace MSU_Case_LostAndFound.Pages
 
         [BindProperty]
         public Animal Animal { get; set; }
-        public void OnGet()
+        public async Task OnGet()
         {
-
+            AnimalLst = await _db.Animals.ToListAsync();
         }
 
         public async Task<IActionResult> OnPost()
