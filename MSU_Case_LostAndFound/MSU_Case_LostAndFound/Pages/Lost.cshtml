@@ -2,10 +2,51 @@
 @model LostModel
 @{
     ViewData["Title"] = "Dyr som er savnet";
+
+
+    int totalItems = 18;
+    int itemsPerRow = 3;
+
+    int itemsRemaining = totalItems;
 }
 
+<div class="w-100 d-flex flex-row">
+    <div class="w-50">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <div class="w-50 d-flex justify-content-end align-content-end">
+        <a asp-area="" asp-page="/NewAnimal">
+            <div class="btn btn-primary">Ny annonse</div>
+        </a>
+    </div>
+</div>
 
-<h1>@ViewData["Title"]</h1>
-
-<p>Lost animals coming soon ...</p>
-
+@for (int i = 0; i < totalItems; i++)
+{
+    if (itemsRemaining < itemsPerRow) itemsPerRow = itemsRemaining;
+    itemsRemaining -= itemsPerRow;
+    <div class="w-100 d-flex flex-row justify-content-between">
+    @for (int j = 0; j < itemsPerRow; j++)
+    {
+        <div class="w-25 border p-2 mb-2 d-flex flex-row">
+            <div class="w-50 mr-1">
+                <!--<p>picture</p>-->
+                <img src="~/images/cat_in_grass.jpg" id="animal-picture" class="img-fluid ar-1-1"/>
+            </div>
+            <div class="w-50 d-flex flex-column">
+                <div>
+                    Name
+                </div>
+                <div>
+                    Location
+                </div>
+                <div>
+                    <a asp-area="" asp-page="/Index">
+                        <div class="btn btn-warning">Se mer</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+}

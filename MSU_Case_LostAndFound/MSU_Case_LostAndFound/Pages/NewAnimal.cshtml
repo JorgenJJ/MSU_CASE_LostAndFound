@@ -1,0 +1,22 @@
+﻿@page
+@model MSU_Case_LostAndFound.Pages.NewAnimalModel
+@{
+    ViewData["Title"] = "Registrer kjæledyr";
+}
+
+<div class="w-100 d-flex flex-column justify-content-center">
+    <form action="/" method="post">
+        <div id="input_info_general" class="w-100 d-flex flex-column align-content-center">
+            <h3>Generell informasjon</h3>
+            <div></div>
+            <label for="pet_name">Navn: </label>
+            <input type="text" name="pet_name" placeholder="Skriv inn navnet..." />
+        </div>
+        <div id="input_info_pet" class="w-100 d-flex justify-content-center">
+            <h3>Om kjæledyret</h3>
+        </div>
+        <div id="input_info_owner" class="w-100 d-flex justify-content-center">
+            <h3>Om eier</h3>
+        </div>
+    </form>
+</div>
