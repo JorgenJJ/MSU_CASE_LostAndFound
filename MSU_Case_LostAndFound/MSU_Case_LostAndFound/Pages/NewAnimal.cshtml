@@ -1,22 +1,42 @@
 ﻿@page
-@model MSU_Case_LostAndFound.Pages.NewAnimalModel
+@model NewAnimalModel
 @{
-    ViewData["Title"] = "Registrer kjæledyr";
+    ViewData["Title"] = "Dyr som er savnet";
 }
 
-<div class="w-100 d-flex flex-column justify-content-center">
-    <form action="/" method="post">
-        <div id="input_info_general" class="w-100 d-flex flex-column align-content-center">
-            <h3>Generell informasjon</h3>
-            <div></div>
-            <label for="pet_name">Navn: </label>
-            <input type="text" name="pet_name" placeholder="Skriv inn navnet..." />
+<h1>@ViewData["Title"]</h1>
+
+<br />
+<h2 class="text-info">Create New Book</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Animal.Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Animal.Name" class="form-control" />
+            </div>
         </div>
-        <div id="input_info_pet" class="w-100 d-flex justify-content-center">
-            <h3>Om kjæledyret</h3>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Animal.Sex"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Animal.Sex" class="form-control" />
+            </div>
         </div>
-        <div id="input_info_owner" class="w-100 d-flex justify-content-center">
-            <h3>Om eier</h3>
+
+        <div class="form-group row">
+            <div class="col-3 offset-4">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="AnimalList" class="btn btn-success form-control">Back to List</a>
+            </div>
         </div>
     </form>
-</div>
+</div>   
