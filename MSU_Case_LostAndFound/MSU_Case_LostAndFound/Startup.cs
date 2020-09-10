@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MaximeRouiller.Azure.AppService.EasyAuth;
+using Microsoft.Data.SqlClient;
 
 namespace MSU_Case_LostAndFound
 {
@@ -26,13 +27,23 @@ namespace MSU_Case_LostAndFound
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //services.AddAuthentication().AddEasyAuthAuthentication((o) => { });
-
             services.AddRazorPages();
 
-            services.AddRazorPages();
+            /*services.AddAuthentication()
+            .AddGoogle(options =>
+            {
+                IConfigurationSection googleAuthNSection =
+                    Configuration.GetSection("Authentication:Google");
 
-
+                options.ClientId = googleAuthNSection["ClientId"];
+                options.ClientSecret = googleAuthNSection["ClientSecret"];
+            })
+            .AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+                facebookOptions.AccessDeniedPath = "/Account/Login";
+            });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,11 +66,14 @@ namespace MSU_Case_LostAndFound
             app.UseRouting();
 
             app.UseAuthentication();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id}");
+
                 endpoints.MapRazorPages();
             });
         }
