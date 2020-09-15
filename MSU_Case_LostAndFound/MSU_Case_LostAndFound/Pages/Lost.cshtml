@@ -27,7 +27,7 @@
         Console.WriteLine(item.Name);
         counter++;
 
-        @if (counter % 3 == 0)
+        @if (counter % itemsPerRow == 0)
         {
             Console.WriteLine("Line swap");
             @:</div><div class="w-100 d-flex flex-row justify-content-between">
@@ -46,8 +46,8 @@
                     @item.Sex
                 </div>
                 <div>
-                    <a asp-area="" asp-page="/Index">
-                        <div class="btn btn-primary">Se mer</div>
+                    <a asp-area="" asp-page="/AnimalProfile">
+                        <div class="btn btn-primary">Ny annonse</div>
                     </a>
                 </div>
             </div>

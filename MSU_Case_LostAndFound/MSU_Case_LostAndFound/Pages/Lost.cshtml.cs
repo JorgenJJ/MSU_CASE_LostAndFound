@@ -33,7 +33,7 @@ namespace MSU_Case_LostAndFound.Pages
             {
                 await _db.Animals.AddAsync(Animal);
                 await _db.SaveChangesAsync();
-                return RedirectToPage("AnimalList");
+                return RedirectToPage("Lost");
 
             }
             else
