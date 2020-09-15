@@ -12,18 +12,18 @@ namespace MSU_Case_LostAndFound.Pages
 {
     public class AnimalListModel : PageModel
     {
-        public IEnumerable<Animal> AnimalLst { get; set; }
+        public IEnumerable<AnimalsLost> tmpAnimalLst { get; set; }
 
 
-        private readonly ApplicationDbContext _db;
-        public AnimalListModel(ApplicationDbContext db)
+        private readonly RescuteDBContext _db;
+        public AnimalListModel(RescuteDBContext db)
         {
             _db = db;
         }
 
         public async Task OnGet()
         {
-            AnimalLst = await _db.Animals.ToListAsync();
+            tmpAnimalLst = await _db.AnimalsLost.ToListAsync();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MSU_Case_LostAndFound.Models
+namespace MSU_Case_LostAndFound.Model
 {
     public partial class AnimalsLost
     {

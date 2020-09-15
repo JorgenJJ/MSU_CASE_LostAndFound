@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace MSU_Case_LostAndFound.Models
+namespace MSU_Case_LostAndFound.Model
 {
     public partial class RescuteDBContext : DbContext
     {
@@ -30,9 +30,11 @@ namespace MSU_Case_LostAndFound.Models
         {
             modelBuilder.Entity<AnimalsLost>(entity =>
             {
+
                 entity.HasKey(e => e.AnimalId);
 
                 entity.Property(e => e.Animal)
+                    .HasConversion<string>()
                     .IsRequired()
                     .HasMaxLength(10);
 
@@ -51,8 +53,10 @@ namespace MSU_Case_LostAndFound.Models
                     .HasMaxLength(20);
 
                 entity.Property(e => e.Gender)
+                    .HasConversion<string>()
                     .IsRequired()
                     .HasMaxLength(8);
+               
 
                 entity.Property(e => e.History).HasColumnType("ntext");
 

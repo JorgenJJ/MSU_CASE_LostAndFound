@@ -15,7 +15,7 @@
         <h1>@ViewData["Title"]</h1>
     </div>
     <div class="w-50 d-flex justify-content-end align-content-end">
-        <a asp-area="" asp-page="/NewAnimal">
+        <a asp-area="" asp-page="/Register">
             <div class="btn btn-primary">Ny annonse</div>
         </a>
     </div>
@@ -30,20 +30,20 @@
         @if (counter % 3 == 0)
         {
             Console.WriteLine("Line swap");
-            @:</div><div class="w-100 d-flex flex-row justify-content-between">
+        @:</div><div class="w-100 d-flex flex-row justify-content-between">
         }
 
         <div class="w-25 border p-2 mb-2 d-flex flex-row">
             <div class="w-50 mr-1">
-                <!--<p>picture</p>-->
-                <img src="~/images/cat_in_grass.jpg" id="animal-picture" class="img-fluid ar-1-1" />
+                <p>picture</p>
+                <img src="@item.ImageUrl" id="animal-picture" class="img-fluid ar-1-1" />
             </div>
             <div class="w-50 d-flex flex-column">
                 <div>
                     @item.Name
                 </div>
                 <div>
-                    @item.Sex
+                    @item.Gender
                 </div>
                 <div>
                     <a asp-area="" asp-page="/Index">
@@ -55,3 +55,4 @@
     }
 </div>
 
+@*~/images/cat_in_grass.jpg*@

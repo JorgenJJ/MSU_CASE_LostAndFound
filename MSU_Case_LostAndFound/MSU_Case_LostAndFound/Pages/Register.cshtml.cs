@@ -11,9 +11,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Blob;
-using MSU_Case_LostAndFound.Models;
+using MSU_Case_LostAndFound.Model;
 
 
 namespace MSU_Case_LostAndFound.Pages
