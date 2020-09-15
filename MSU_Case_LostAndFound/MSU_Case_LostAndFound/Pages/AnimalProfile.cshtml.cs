@@ -14,7 +14,7 @@ namespace MSU_Case_LostAndFound.Pages
 {
     public class AnimalProfileModel : PageModel
     {
-        public Animal animal;
+        public Animal animal { get; set; }
 
         private readonly ApplicationDbContext _db;
         public AnimalProfileModel(ApplicationDbContext db)
@@ -25,7 +25,7 @@ namespace MSU_Case_LostAndFound.Pages
 
         [BindProperty]
         public Animal Animal { get; set; }
-
+        
         public async Task OnGet()
         {
             var temp_id = RouteData.Values["id"];

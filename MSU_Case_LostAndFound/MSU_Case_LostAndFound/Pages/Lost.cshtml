@@ -24,7 +24,6 @@
 <div class="w-100 d-flex flex-row justify-content-between">
     @foreach (var item in Model.AnimalLst)
     {
-        Console.WriteLine(item.Name);
         counter++;
 
         @if (counter % itemsPerRow == 0)
@@ -46,7 +45,7 @@
                     @item.Sex
                 </div>
                 <div>
-                    <a asp-area="" asp-page="/AnimalProfile">
+                    <a asp-area="" asp-page="/AnimalProfile" asp-route-id="@item.Id">
                         <div class="btn btn-primary">Ny annonse</div>
                     </a>
                 </div>
@@ -54,4 +53,3 @@
         </div>
     }
 </div>
-
