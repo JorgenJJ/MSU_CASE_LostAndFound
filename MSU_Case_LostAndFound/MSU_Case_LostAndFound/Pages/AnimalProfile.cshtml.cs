@@ -14,10 +14,10 @@ namespace MSU_Case_LostAndFound.Pages
 {
     public class AnimalProfileModel : PageModel
     {
-        public Animal animal { get; set; }
+        public AnimalsLost animal;
 
-        private readonly ApplicationDbContext _db;
-        public AnimalProfileModel(ApplicationDbContext db)
+        private readonly RescuteDBContext _db;
+        public AnimalProfileModel(RescuteDBContext db)
         {
             _db = db;
         }
@@ -29,7 +29,7 @@ namespace MSU_Case_LostAndFound.Pages
         public async Task OnGet()
         {
             var temp_id = RouteData.Values["id"];
-            animal = await _db.Animals.FindAsync(int.Parse((string)temp_id));
+            animal = await _db.AnimalsLost.FindAsync(int.Parse((string)temp_id));
         }
     }
 }
