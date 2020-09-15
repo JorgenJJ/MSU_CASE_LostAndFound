@@ -158,3 +158,13 @@ body {
     overflow: hidden;
     object-fit: cover;
 }
+
+.animal-profile-image-container {
+    height: 500px;
+}
+
+.img-animal-profile {
+    object-fit: cover;
+    max-height: 500px;
+    width: inherit;
+}

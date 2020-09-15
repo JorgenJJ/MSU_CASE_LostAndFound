@@ -24,10 +24,9 @@
 <div class="w-100 d-flex flex-row justify-content-between">
     @foreach (var item in Model.AnimalLst)
     {
-        Console.WriteLine(item.Name);
         counter++;
 
-        @if (counter % 3 == 0)
+        @if (counter % itemsPerRow == 0)
         {
             Console.WriteLine("Line swap");
         @:</div><div class="w-100 d-flex flex-row justify-content-between">
@@ -46,13 +45,11 @@
                     @item.Gender
                 </div>
                 <div>
-                    <a asp-area="" asp-page="/Index">
-                        <div class="btn btn-primary">Se mer</div>
+                    <a asp-area="" asp-page="/AnimalProfile" asp-route-id="@item.AnimalId">
+                        <div class="btn btn-primary">Ny annonse</div>
                     </a>
                 </div>
             </div>
         </div>
     }
 </div>
-
-@*~/images/cat_in_grass.jpg*@

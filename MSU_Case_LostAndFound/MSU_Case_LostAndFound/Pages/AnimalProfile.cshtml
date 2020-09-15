@@ -1,0 +1,80 @@
+﻿@page "{id}"
+@model AnimalProfileModel
+@{
+    ViewData["Title"] = "";
+}
+
+<div class="w-100 d-flex justify-content-center">
+    <div class="w-75">
+        @if (Model.animal.ImageUrl != null)
+        {
+            <div class="w-100 animal-profile-image-container">
+                <img src="@Model.animal.ImageUrl" alt="Image missing" class="img-animal-profile" />
+            </div>
+        }
+        <div class="w-100 d-flex flex-row">
+            <div class="w-50">
+                <div class="d-flex flex-row">
+                    <p class="text-primary font-weight-bold mr-2">Navn:</p>
+                    <p>@Model.animal.Name</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <p class="text-primary font-weight-bold mr-2">Kjønn:</p>
+                    <p>@Model.animal.Gender</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <p class="text-primary font-weight-bold mr-2">Dato:</p>
+                    <p>@Model.animal.LostDate</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <p class="text-primary font-weight-bold mr-2">Område:</p>
+                    <p>@Model.animal.NearArea</p>
+                </div>
+            </div>
+            <div class="w-50">
+                <div class="d-flex flex-row">
+                    <p class="text-primary font-weight-bold mr-2">Rase:</p>
+                    <p>@Model.animal.Animal</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <p class="text-primary font-weight-bold mr-2">Farge:</p>
+                    <p>@Model.animal.Color</p>
+                </div>
+                <div class="d-flex flex-row">
+                    <p class="text-primary font-weight-bold mr-2">Pels:</p>
+                    <p>@Model.animal.FurLenght, @Model.animal.FurPattern</p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <p>@Model.animal.Description</p>
+        </div>
+        <div id="map" style='position:relative;width:600px;height:400px;'></div>
+        <style>
+            #map {
+                width: 100%;
+                height: 400px;
+                background-color: grey;
+            }
+        </style>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Aiys7Ydg3XUbNAlmbCkxgKTymz6NaBdEWPBpA5fEC2_tqhk2Ub27iVBZNXZl4_0k' async defer></script>    </div>
+    <script type="text/javascript">
+        function GetMap() {
+            let lng;
+            let lat;
+            $.get("https://dev.virtualearth.net/REST/v1/Locations/@Model.animal.NearArea?key=Aiys7Ydg3XUbNAlmbCkxgKTymz6NaBdEWPBpA5fEC2_tqhk2Ub27iVBZNXZl4_0k", function (data, status) {
+                console.log(data);
+                lng = data.resourceSets[0].resources[0].point.coordinates[0];
+                lat = data.resourceSets[0].resources[0].point.coordinates[1];
+
+                var map = new Microsoft.Maps.Map("#map", {
+                    credentials: 'Your Bing Maps Key',
+                    center: new Microsoft.Maps.Location(lng, lat),
+                    mapTypeId: Microsoft.Maps.MapTypeId.terrain,
+                    zoom: 16
+                });
+            });
+
+        }
+    </script>
+</div>
