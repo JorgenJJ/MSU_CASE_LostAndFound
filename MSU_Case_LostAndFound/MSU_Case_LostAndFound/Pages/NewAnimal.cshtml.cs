@@ -12,15 +12,15 @@ namespace MSU_Case_LostAndFound.Pages
 {
     public class NewAnimalModel : PageModel
     {
-        private readonly ApplicationDbContext _db;
+        private readonly RescuteDBContext _db;
 
-        public NewAnimalModel(ApplicationDbContext db)
+        public NewAnimalModel(RescuteDBContext db)
         {
             _db = db;
         }
 
         [BindProperty]
-        public Animal Animal { get; set; }
+        public AnimalsLost Animal { get; set; }
         public void OnGet()
         {
 
@@ -30,7 +30,7 @@ namespace MSU_Case_LostAndFound.Pages
         {
             if (ModelState.IsValid)
             {
-                await _db.Animals.AddAsync(Animal);
+                await _db.AnimalsLost.AddAsync(Animal);
                 await _db.SaveChangesAsync();
                 return RedirectToPage("AnimalList");
 
