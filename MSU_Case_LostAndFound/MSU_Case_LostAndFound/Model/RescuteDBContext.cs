@@ -30,7 +30,6 @@ namespace MSU_Case_LostAndFound.Model
         {
             modelBuilder.Entity<AnimalsLost>(entity =>
             {
-
                 entity.HasKey(e => e.AnimalId);
 
                 entity.Property(e => e.Animal)
@@ -56,7 +55,6 @@ namespace MSU_Case_LostAndFound.Model
                     .HasConversion<string>()
                     .IsRequired()
                     .HasMaxLength(8);
-               
 
                 entity.Property(e => e.History).HasColumnType("ntext");
 
@@ -73,6 +71,10 @@ namespace MSU_Case_LostAndFound.Model
                     .HasMaxLength(50);
 
                 entity.Property(e => e.Updated).HasColumnType("datetime");
+
+                entity.Property(e => e.UserId)
+                    .HasColumnName("user_id")
+                    .HasMaxLength(450);
             });
 
             OnModelCreatingPartial(modelBuilder);
