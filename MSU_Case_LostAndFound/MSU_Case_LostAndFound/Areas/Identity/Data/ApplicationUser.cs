@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using MSU_Case_LostAndFound.Model;
 
 namespace MSU_Case_LostAndFound.Areas.Identity.Data
 {
@@ -16,6 +17,8 @@ namespace MSU_Case_LostAndFound.Areas.Identity.Data
         [PersonalData]
         [Column(TypeName = "nvarchar(100)")]
         public string lastname { get; set; }
+        public virtual ICollection<AnimalsLost> AnimalsLost { get; set; }
+
 
     }
 }

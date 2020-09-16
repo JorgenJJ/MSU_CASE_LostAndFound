@@ -18,17 +18,18 @@ namespace MSU_Case_LostAndFound.Model
         public string FurPattern { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
+        public string UserId { get; set; }
     }
 
     public enum Animal
     {
-        Cat, 
-        Dog
+        Dog,
+        Cat
     }
 
     public enum Gender
     {
-        Male,
+        Male, 
         Female
     }
 }

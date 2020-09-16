@@ -21,7 +21,7 @@ namespace MSU_Case_LostAndFound.Model
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=tcp:rescutesqlserver.database.windows.net,1433;Initial Catalog=RescuteDB;Persist Security Info=False;User ID=rescuteadmin;Password=erikito123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
@@ -30,7 +30,6 @@ namespace MSU_Case_LostAndFound.Model
         {
             modelBuilder.Entity<AnimalsLost>(entity =>
             {
-
                 entity.HasKey(e => e.AnimalId);
 
                 entity.Property(e => e.Animal)
@@ -56,7 +55,6 @@ namespace MSU_Case_LostAndFound.Model
                     .HasConversion<string>()
                     .IsRequired()
                     .HasMaxLength(8);
-               
 
                 entity.Property(e => e.History).HasColumnType("ntext");
 
@@ -73,6 +71,10 @@ namespace MSU_Case_LostAndFound.Model
                     .HasMaxLength(50);
 
                 entity.Property(e => e.Updated).HasColumnType("datetime");
+
+                entity.Property(e => e.UserId)
+                    .HasColumnName("user_id")
+                    .HasMaxLength(450);
             });
 
             OnModelCreatingPartial(modelBuilder);

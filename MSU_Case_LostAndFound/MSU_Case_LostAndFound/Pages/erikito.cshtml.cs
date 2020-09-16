@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MSU_Case_LostAndFound.Pages
 {
-    public class LoginModel : PageModel
+    public class erikitoModel : PageModel
     {
         public void OnGet()
         {

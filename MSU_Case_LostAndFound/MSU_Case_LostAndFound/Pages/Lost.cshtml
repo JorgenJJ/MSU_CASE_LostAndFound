@@ -10,6 +10,17 @@
     int counter = -1;
 }
 
+<form asp-page="./Lost" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Lost">Back to full List</a>
+        </p>
+    </div>
+</form>
+
 <div class="w-100 d-flex flex-row">
     <div class="w-50">
         <h1>@ViewData["Title"]</h1>
