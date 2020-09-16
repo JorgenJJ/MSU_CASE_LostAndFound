@@ -20,7 +20,6 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-
     <div class="border container" style="padding:30px;">
         <form method="post" enctype="multipart/form-data">
             <div class="form-group row">
@@ -58,7 +57,7 @@
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp -for="AnimalsLost.LostDate"></label>
+                    <label asp-for="AnimalsLost.LostDate"></label>
                 </div>
                 <div class="col-6">
                     <input asp-for="AnimalsLost.LostDate" class="form-control" />

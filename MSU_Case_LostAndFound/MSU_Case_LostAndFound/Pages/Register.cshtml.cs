@@ -12,9 +12,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MSU_Case_LostAndFound.Model;
-using Microsoft.AspNetCore.Identity;
-using MSU_Case_LostAndFound.Areas.Identity.Data;
-using MSU_Case_LostAndFound.Areas.Identity.Pages.Account;
 
 
 namespace MSU_Case_LostAndFound.Pages
@@ -25,14 +22,11 @@ namespace MSU_Case_LostAndFound.Pages
         private readonly RescuteDBContext _db;
         //private readonly AzureStorageConfig _storageConfig;
         private readonly AzureStorageConfig _storageConfig = null;
-        private readonly UserManager<ApplicationUser> _userManager;
 
-
-        public RegisterModel(RescuteDBContext db, IOptions<AzureStorageConfig> config, UserManager<ApplicationUser> userManager)
+        public RegisterModel(RescuteDBContext db, IOptions<AzureStorageConfig> config)
         {
             _db = db;
             _storageConfig = config.Value;
-            _userManager = userManager;
         }
 
 
@@ -75,11 +69,6 @@ namespace MSU_Case_LostAndFound.Pages
 
                     AnimalsLost.ImageUrl = stringUrl;
 
-                }
-
-                if (User.Identity.IsAuthenticated)
-                {
-                    AnimalsLost.UserId = _userManager.GetUserId(HttpContext.User);
                 }
 
                 await _db.AnimalsLost.AddAsync(AnimalsLost);
