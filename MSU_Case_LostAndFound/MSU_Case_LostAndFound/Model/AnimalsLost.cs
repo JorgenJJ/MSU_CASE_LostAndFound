@@ -7,8 +7,8 @@ namespace MSU_Case_LostAndFound.Model
     {
         public int AnimalId { get; set; }
         public string Name { get; set; }
-        public string Animal { get; set; }
-        public string Gender { get; set; }
+        public Animal Animal { get; set; }
+        public Gender Gender { get; set; }
         public DateTime LostDate { get; set; }
         public DateTime? Updated { get; set; }
         public string NearArea { get; set; }

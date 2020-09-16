@@ -21,6 +21,22 @@
     </div>
 </div>
 
+<form asp-page="./Lost" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" />
+            <input type="submit" value="Search" class="btn btn-primary" /> 
+            <select type="text" name="SearchAnimal" class="custom-select"
+                    asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Model.Animal>()">
+                <option value="">Please Select</option>
+            </select>|
+            <a asp-page="./Lost">Back to full List</a>
+
+        </p>
+    </div>
+</form>
+
 <div class="w-100 d-flex flex-row justify-content-between">
     @foreach (var item in Model.AnimalLst)
     {

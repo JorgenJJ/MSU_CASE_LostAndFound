@@ -14,6 +14,8 @@ namespace MSU_Case_LostAndFound.Pages
     public class LostModel : PageModel
     {
         public IEnumerable<AnimalsLost> AnimalLst { get; set; }
+        //public string CurrentFilter { get; set; }
+
 
         private readonly RescuteDBContext _db;
         public LostModel(RescuteDBContext db)
@@ -23,25 +25,48 @@ namespace MSU_Case_LostAndFound.Pages
 
         [BindProperty]
         public AnimalsLost AnimalsLost { get; set; }
-        public async Task OnGet()
+        public async Task OnGetAsync(string searchString, string searchAnimal)
         {
-            AnimalLst = await _db.AnimalsLost.ToListAsync();
+
+            //CurrentFilter = searchString;
+
+            IQueryable<AnimalsLost> studentsIQ = from s in _db.AnimalsLost
+                                                 select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                studentsIQ = studentsIQ.Where(s => s.Name.Contains(searchString));
+            }
+
+            if (!String.IsNullOrEmpty(searchAnimal))
+            {
+                //AnimalsLost.AnimalId myValueAsEnum = (AnimalsLost.Animal)
+                //              Enum.Parse(typeof(AnimalsLost.Animal), searchAnimal);
+
+                studentsIQ = studentsIQ.Where(s => s.Animal == (Animal)Enum.Parse(typeof(Animal), searchAnimal));
+            }
+
+            AnimalLst = await studentsIQ.AsNoTracking().ToListAsync();
+
         }
+
+
+
 
         //public async Task<IActionResult> OnPost()
         //{
 
-            //if (ModelState.IsValid)
-            //{
-            //    await _db.AnimalsLost.AddAsync(AnimalsLost);
-            //    await _db.SaveChangesAsync();
-            //    return RedirectToPage("Lost");
+        //if (ModelState.IsValid)
+        //{
+        //    await _db.AnimalsLost.AddAsync(AnimalsLost);
+        //    await _db.SaveChangesAsync();
+        //    return RedirectToPage("Lost");
 
-            //}
-            //else
-            //{
-            //    return Page();
-            //}
+        //}
+        //else
+        //{
+        //    return Page();
+        //}
         //}
     }
 }
