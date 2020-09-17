@@ -1,13 +1,13 @@
 ﻿@page
-@model MSU_Case_LostAndFound.Pages.FoundModel
+@model FoundModel
 @{
     ViewData["Title"] = "Dyr som er funnet";
 
 
-    int totalItems = 18;
+    int totalItems = Model.AnimalLst.Count();
     int itemsPerRow = 3;
 
-    int itemsRemaining = totalItems;
+    int counter = -1;
 }
 
 <div class="w-100 d-flex flex-row">
@@ -15,38 +15,57 @@
         <h1>@ViewData["Title"]</h1>
     </div>
     <div class="w-50 d-flex justify-content-end align-content-end">
-        <a asp-area="" asp-page="/NewAnimal">
+        <a asp-area="" asp-page="/Register">
             <div class="btn btn-primary">Ny annonse</div>
         </a>
     </div>
 </div>
 
-@for (int i = 0; i < totalItems; i++)
-{
-    if (itemsRemaining < itemsPerRow) itemsPerRow = itemsRemaining;
-    itemsRemaining -= itemsPerRow;
-    <div class="w-100 d-flex flex-row justify-content-between">
-        @for (int j = 0; j < itemsPerRow; j++)
+<form asp-page="./Lost" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" />
+            <input type="submit" value="Search" class="btn btn-primary" />
+            <select type="text" name="SearchAnimal" class="custom-select"
+                    asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Model.Animal>()">
+                <option value="">Please Select</option>
+            </select>|
+            <a asp-page="./Lost">Back to full List</a>
+
+        </p>
+    </div>
+</form>
+
+<div class="w-100 d-flex flex-row justify-content-between">
+    @foreach (var item in Model.AnimalLst)
+    {
+        counter++;
+
+        @if (counter % itemsPerRow == 0)
         {
-            <div class="w-25 border p-2 mb-2 d-flex flex-row">
-                <div class="w-50 mr-1">
-                    <!--<p>picture</p>-->
-                    <img src="~/images/cat_in_grass.jpg" id="animal-picture" class="img-fluid ar-1-1" />
+            Console.WriteLine("Line swap");
+        @:</div><div class="w-100 d-flex flex-row justify-content-between">
+        }
+
+        <div class="w-25 border p-2 mb-2 d-flex flex-row">
+            <div class="w-50 mr-1">
+                <p>picture</p>
+                <img src="@item.ImageUrl" id="animal-picture" class="img-fluid ar-1-1" />
+            </div>
+            <div class="w-50 d-flex flex-column">
+                <div>
+                    @item.Name
                 </div>
-                <div class="w-50 d-flex flex-column">
-                    <div>
-                        Name
-                    </div>
-                    <div>
-                        Location
-                    </div>
-                    <div>
-                        <a asp-area="" asp-page="/Index">
-                            <div class="btn btn-warning">Se mer</div>
-                        </a>
-                    </div>
+                <div>
+                    @item.Gender
+                </div>
+                <div>
+                    <a asp-area="" asp-page="/AnimalProfile" asp-route-id="@item.AnimalId">
+                        <div class="btn btn-primary">Ny annonse</div>
+                    </a>
                 </div>
             </div>
-        }
-    </div>
-}
+        </div>
+    }
+</div>
