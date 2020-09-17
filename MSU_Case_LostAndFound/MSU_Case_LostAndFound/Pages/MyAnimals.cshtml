@@ -1,7 +1,7 @@
 ﻿@page
-@model LostModel
+@model MyAnimalsModel
 @{
-    ViewData["Title"] = "Missing animals";
+    ViewData["Title"] = "My Animals";
 
 
     int totalItems = Model.AnimalLst.Count();
@@ -14,35 +14,7 @@
     <div class="w-50">
         <h1>@ViewData["Title"]</h1>
     </div>
-    <div class="w-50 d-flex justify-content-end align-content-end">
-        <a asp-area="" asp-page="/RegisterLost">
-            <div class="btn btn-primary">New registration</div>
-        </a>
-    </div>
 </div>
-
-<form asp-page="./Lost" method="get">
-    <div class="form-actions no-color">
-        <p class="mr-2 btn btn-link" id="btn_toggle_filters">Show filters</p>
-        <a asp-page="./Los"><p class="btn btn-link">Reset filters</p></a>
-        <div class="d-flex flex-column" id="div_filters" style="visibility: hidden; height: 0px">
-            <div class="d-flex flex-column filter-box">
-                <div>
-                    <p class="mb-0 pb-0">Name:</p>
-                    <input type="text" name="SearchString" class="mb-1" />
-                </div>
-                <div>
-                    <p class="mb-0 pb-0">Animal</p>
-                    <select type="text" name="SearchAnimal" class="custom-select mb-1"
-                            asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Model.Animal>()">
-                        <option value="">Please Select</option>
-                    </select>
-                </div>
-                <input type="submit" value="Search" class="btn btn-primary" />
-            </div>
-        </div>
-    </div>
-</form>
 
 <script>
     document.getElementById("btn_toggle_filters").addEventListener("click", function () {

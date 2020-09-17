@@ -12,6 +12,16 @@
                 <img src="@Model.animal.ImageUrl" alt="Image missing" class="img-animal-profile" />
             </div>
         }
+        <div class="d-flex flex-row align-items-center mt-2">
+            <div class="d-flex flex-row mr-3">
+                <img src="~/icons/perm_identity-black-18dp.svg" alt="User" class="user-icon" />
+                <p>@Model.userName</p>
+            </div>
+            <div class="d-flex flex-row">
+                <img src="~/icons/phone-24px.svg" alt="Phone" class="user-icon" />
+                <p>@Model.userPhoneNumber</p>
+            </div>
+        </div>
         <div class="w-100 d-flex flex-row">
             <div class="w-50">
                 <div class="d-flex flex-row">
