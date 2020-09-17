@@ -50,8 +50,7 @@
 
         <div class="w-25 border p-2 mb-2 d-flex flex-row">
             <div class="w-50 mr-1">
-                <p>picture</p>
-                <img src="@item.ImageUrl" id="animal-picture" class="img-fluid ar-1-1" />
+                <img src="@item.ImageUrl" class="img-animal-thumbnail" />
             </div>
             <div class="w-50 d-flex flex-column">
                 <div>
@@ -62,7 +61,7 @@
                 </div>
                 <div>
                     <a asp-area="" asp-page="/AnimalProfile" asp-route-id="@item.AnimalId">
-                        <div class="btn btn-primary">Ny annonse</div>
+                        <div class="btn btn-primary">View</div>
                     </a>
                 </div>
             </div>

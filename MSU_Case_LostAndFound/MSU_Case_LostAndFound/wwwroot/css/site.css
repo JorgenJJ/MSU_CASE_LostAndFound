@@ -168,3 +168,9 @@ body {
     max-height: 500px;
     width: inherit;
 }
+
+.img-animal-thumbnail {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
