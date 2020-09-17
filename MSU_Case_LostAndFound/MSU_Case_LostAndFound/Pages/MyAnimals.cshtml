@@ -1,0 +1,67 @@
+﻿@page
+@model MyAnimalsModel
+@{
+    ViewData["Title"] = "My Animals";
+
+
+    int totalItems = Model.AnimalLst.Count();
+    int itemsPerRow = 3;
+
+    int counter = -1;
+}
+
+<div class="w-100 d-flex flex-row">
+    <div class="w-50">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div>
+
+<script>
+    document.getElementById("btn_toggle_filters").addEventListener("click", function () {
+        var box = document.getElementById("div_filters");
+        if (this.innerHTML == "Show filters") {
+            this.innerHTML = "Hide filters";
+            box.style.visibility = "visible";
+            box.style.height = "auto";
+        }
+        else {
+            this.innerHTML = "Show filters";
+            box.style.visibility = "hidden";
+            box.style.height = "0px";
+        }
+    })
+</script>
+
+<div class="w-100 d-flex flex-row justify-content-between">
+    @foreach (var item in Model.AnimalLst)
+    {
+        counter++;
+
+        @if (counter % itemsPerRow == 0)
+        {
+            Console.WriteLine("Line swap");
+        @:</div><div class="w-100 d-flex flex-row justify-content-between">
+        }
+
+        <div class="profile-box border p-2 mb-2 d-flex flex-row">
+            <div class="w-50 mr-1">
+                <img src="@item.ImageUrl" class="img-animal-thumbnail" />
+            </div>
+            <div class="w-50 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="h3">
+                        @item.Name
+                    </div>
+                    <div class="h6">
+                        Near @item.NearArea
+                    </div>
+                </div>
+                <div>
+                    <a asp-area="" asp-page="/AnimalProfile" asp-route-id="@item.AnimalId">
+                        <div class="btn btn-primary w-100">View</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
