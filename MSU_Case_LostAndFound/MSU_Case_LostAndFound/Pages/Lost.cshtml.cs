@@ -30,12 +30,12 @@ namespace MSU_Case_LostAndFound.Pages
 
             //CurrentFilter = searchString;
 
-            IQueryable<AnimalsLost> studentsIQ = from s in _db.AnimalsLost
+            IQueryable<AnimalsLost> animals = from s in _db.AnimalsLost
                                                  select s;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                studentsIQ = studentsIQ.Where(s => s.Name.Contains(searchString));
+                animals = animals.Where(s => s.Name.Contains(searchString));
             }
 
             if (!String.IsNullOrEmpty(searchAnimal))
@@ -43,10 +43,10 @@ namespace MSU_Case_LostAndFound.Pages
                 //AnimalsLost.AnimalId myValueAsEnum = (AnimalsLost.Animal)
                 //              Enum.Parse(typeof(AnimalsLost.Animal), searchAnimal);
 
-                studentsIQ = studentsIQ.Where(s => s.Animal == (Animal)Enum.Parse(typeof(Animal), searchAnimal));
+                animals = animals.Where(s => s.Animal == (Animal)Enum.Parse(typeof(Animal), searchAnimal));
             }
 
-            AnimalLst = await studentsIQ.AsNoTracking().ToListAsync();
+            AnimalLst = await animals.AsNoTracking().ToListAsync();
 
         }
 

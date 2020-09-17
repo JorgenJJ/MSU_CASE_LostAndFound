@@ -87,7 +87,10 @@
                     <label asp-for="AnimalsFound.FurLenght"></label>
                 </div>
                 <div class="col-6">
-                    <input asp-for="AnimalsFound.FurLenght" class="form-control" />
+                    <select asp-for="AnimalsFound.FurLenght" class="custom-select mr-sm-2"
+                            asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Model.FurLenght>()">
+                        <option value="">Please Select</option>
+                    </select>
                 </div>
             </div>
 
@@ -96,7 +99,10 @@
                     <label asp-for="AnimalsFound.FurPattern"></label>
                 </div>
                 <div class="col-6">
-                    <input asp-for="AnimalsFound.FurPattern" class="form-control" />
+                    <select asp-for="AnimalsFound.FurPattern" class="custom-select mr-sm-2"
+                            asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Model.FurPattern>()">
+                        <option value="">Please Select</option>
+                    </select>
                 </div>
             </div>
 
