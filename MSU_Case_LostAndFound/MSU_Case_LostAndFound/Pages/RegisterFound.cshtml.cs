@@ -88,7 +88,7 @@ namespace MSU_Case_LostAndFound.Pages
                 //set a tempData variable to a success string. we will use this //variable after the redirect to the gallery.
                 TempData["SuccessMessage"] = "Image upload success!";
 
-                return RedirectToPage("Lost");
+                return RedirectToPage("Found");
 
             }
             else
