@@ -1,29 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\agrefslie\\source\\repos\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj": {}
+    "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj": {}
   },
   "projects": {
-    "C:\\Users\\agrefslie\\source\\repos\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj": {
+    "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\agrefslie\\source\\repos\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj",
+        "projectUniqueName": "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj",
         "projectName": "MSU_Case_LostAndFound",
-        "projectPath": "C:\\Users\\agrefslie\\source\\repos\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj",
-        "packagesPath": "C:\\Users\\agrefslie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\agrefslie\\source\\repos\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\obj\\",
+        "projectPath": "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj",
+        "packagesPath": "C:\\Users\\patrick.grove\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\agrefslie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\patrick.grove\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/agrefs97/DemoProjectLab/_packaging/PartsUnlimitedShared/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -39,14 +42,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Azure.Extensions.AspNetCore.Configuration.Secrets": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
-            "Azure.Identity": {
-              "target": "Package",
-              "version": "[1.2.3, )"
-            },
             "Azure.Storage.Blobs": {
               "target": "Package",
               "version": "[12.6.0, )"
@@ -83,14 +78,6 @@
               "target": "Package",
               "version": "[3.1.6, )"
             },
-            "Microsoft.Azure.KeyVault": {
-              "target": "Package",
-              "version": "[3.0.5, )"
-            },
-            "Microsoft.Azure.Services.AppAuthentication": {
-              "target": "Package",
-              "version": "[1.5.0, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.7, )"
@@ -104,10 +91,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.6, )"
-            },
-            "Microsoft.Extensions.Configuration.AzureKeyVault": {
-              "target": "Package",
-              "version": "[3.1.8, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -132,7 +115,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.106\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
