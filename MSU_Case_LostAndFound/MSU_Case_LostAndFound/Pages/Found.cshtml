@@ -1,7 +1,7 @@
 ﻿@page
 @model FoundModel
 @{
-    ViewData["Title"] = "Dyr som er funnet";
+    ViewData["Title"] = "Recovered animals";
 
 
     int totalItems = Model.AnimalLst.Count();
@@ -16,26 +16,49 @@
     </div>
     <div class="w-50 d-flex justify-content-end align-content-end">
         <a asp-area="" asp-page="/RegisterFound">
-            <div class="btn btn-primary">Ny annonse</div>
+            <div class="btn btn-primary">New registration</div>
         </a>
     </div>
 </div>
 
-<form asp-page="./Lost" method="get">
+<form asp-page="./Found" method="get">
     <div class="form-actions no-color">
-        <p>
-            Find by name:
-            <input type="text" name="SearchString" />
-            <input type="submit" value="Search" class="btn btn-primary" />
-            <select type="text" name="SearchAnimal" class="custom-select"
-                    asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Model.Animal>()">
-                <option value="">Please Select</option>
-            </select>|
-            <a asp-page="./Lost">Back to full List</a>
-
-        </p>
+        <p class="mr-2 btn btn-link" id="btn_toggle_filters">Show filters</p>
+        <a asp-page="./Los"><p class="btn btn-link">Reset filters</p></a>
+        <div class="d-flex flex-column" id="div_filters" style="visibility: hidden; height: 0px">
+            <div class="d-flex flex-column filter-box">
+                <div>
+                    <p class="mb-0 pb-0">Name:</p>
+                    <input type="text" name="SearchString" class="mb-1" />
+                </div>
+                <div>
+                    <p class="mb-0 pb-0">Animal</p>
+                    <select type="text" name="SearchAnimal" class="custom-select mb-1"
+                            asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Model.Animal>()">
+                        <option value="">Please Select</option>
+                    </select>
+                </div>
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </div>
     </div>
 </form>
+
+<script>
+    document.getElementById("btn_toggle_filters").addEventListener("click", function () {
+        var box = document.getElementById("div_filters");
+        if (this.innerHTML == "Show filters") {
+            this.innerHTML = "Hide filters";
+            box.style.visibility = "visible";
+            box.style.height = "auto";
+        }
+        else {
+            this.innerHTML = "Show filters";
+            box.style.visibility = "hidden";
+            box.style.height = "0px";
+        }
+    })
+</script>
 
 <div class="w-100 d-flex flex-row justify-content-between">
     @foreach (var item in Model.AnimalLst)
@@ -48,20 +71,22 @@
         @:</div><div class="w-100 d-flex flex-row justify-content-between">
         }
 
-        <div class="w-25 border p-2 mb-2 d-flex flex-row">
+        <div class="profile-box border p-2 mb-2 d-flex flex-row">
             <div class="w-50 mr-1">
-                <img src="@item.ImageUrl" id="animal-picture" class="img-fluid ar-1-1" />
+                <img src="@item.ImageUrl" class="img-animal-thumbnail" />
             </div>
-            <div class="w-50 d-flex flex-column">
+            <div class="w-50 d-flex flex-column justify-content-between">
                 <div>
-                    @item.Name
-                </div>
-                <div>
-                    @item.Gender
+                    <div class="h3">
+                        @item.Name
+                    </div>
+                    <div class="h6">
+                        Near @item.NearArea
+                    </div>
                 </div>
                 <div>
                     <a asp-area="" asp-page="/AnimalProfile" asp-route-id="@item.AnimalId">
-                        <div class="btn btn-primary">View</div>
+                        <div class="btn btn-primary w-100">View</div>
                     </a>
                 </div>
             </div>
