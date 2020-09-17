@@ -18,7 +18,7 @@ using MSU_Case_LostAndFound.Model;
 
 namespace MSU_Case_LostAndFound.Pages
 {
-    public class RegisterModel : PageModel
+    public class RegisterLostModel : PageModel
     {
         //COMMENT:declaration of ApplicationDbContext for an instance of our //database context.
         private readonly RescuteDBContext _db;
@@ -27,7 +27,7 @@ namespace MSU_Case_LostAndFound.Pages
         private readonly UserManager<ApplicationUser> _userManager;
             
 
-    public RegisterModel(RescuteDBContext db, IOptions<AzureStorageConfig> config, UserManager<ApplicationUser> userManager)
+    public RegisterLostModel(RescuteDBContext db, IOptions<AzureStorageConfig> config, UserManager<ApplicationUser> userManager)
     {
             _db = db;
             _storageConfig = config.Value;

@@ -6,7 +6,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-@model RegisterModel
+@model RegisterFoundModel
 @{
     ViewData["Title"] = "Dyr som er savnet";
 }
@@ -15,7 +15,7 @@
 <h1>@ViewData["Title"]</h1>
 
 <br />
-<h2 class="text-info">Register Animal</h2>
+<h2 class="text-info">Register Found Animal</h2>
 <br />
 
 @if (SignInManager.IsSignedIn(User))
@@ -24,19 +24,19 @@
         <form method="post" enctype="multipart/form-data">
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="AnimalsLost.Name"></label>
+                    <label asp-for="AnimalsFound.Name"></label>
                 </div>
                 <div class="col-6">
-                    <input asp-for="AnimalsLost.Name" class="form-control" />
+                    <input asp-for="AnimalsFound.Name" class="form-control" />
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="AnimalsLost.Animal"></label>
+                    <label asp-for="AnimalsFound.Animal"></label>
                 </div>
                 <div class="col-6">
-                    <select asp-for="AnimalsLost.Animal" class="custom-select mr-sm-2"
+                    <select asp-for="AnimalsFound.Animal" class="custom-select mr-sm-2"
                             asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Model.Animal>()">
                         <option value="">Please Select</option>
                     </select>
@@ -45,10 +45,10 @@
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="AnimalsLost.Gender"></label>
+                    <label asp-for="AnimalsFound.Gender"></label>
                 </div>
                 <div class="col-6">
-                    <select asp-for="AnimalsLost.Gender" class="custom-select mr-sm-2"
+                    <select asp-for="AnimalsFound.Gender" class="custom-select mr-sm-2"
                             asp-items="Html.GetEnumSelectList<MSU_Case_LostAndFound.Model.Gender>()">
                         <option value="">Please Select</option>
                     </select>
@@ -57,46 +57,46 @@
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="AnimalsLost.LostDate"></label>
+                    <label asp-for="AnimalsFound.FoundDate"></label>
                 </div>
                 <div class="col-6">
-                    <input asp-for="AnimalsLost.LostDate" class="form-control" />
+                    <input asp-for="AnimalsFound.FoundDate" type="date" class="form-control" />
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="AnimalsLost.NearArea"></label>
+                    <label asp-for="AnimalsFound.NearArea"></label>
                 </div>
                 <div class="col-6">
-                    <input asp-for="AnimalsLost.NearArea" class="form-control" />
+                    <input asp-for="AnimalsFound.NearArea" class="form-control" />
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="AnimalsLost.Color"></label>
+                    <label asp-for="AnimalsFound.Color"></label>
                 </div>
                 <div class="col-6">
-                    <input asp-for="AnimalsLost.Color" class="form-control" />
+                    <input asp-for="AnimalsFound.Color" class="form-control" />
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="AnimalsLost.FurLenght"></label>
+                    <label asp-for="AnimalsFound.FurLenght"></label>
                 </div>
                 <div class="col-6">
-                    <input asp-for="AnimalsLost.FurLenght" class="form-control" />
+                    <input asp-for="AnimalsFound.FurLenght" class="form-control" />
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="AnimalsLost.FurPattern"></label>
+                    <label asp-for="AnimalsFound.FurPattern"></label>
                 </div>
                 <div class="col-6">
-                    <input asp-for="AnimalsLost.FurPattern" class="form-control" />
+                    <input asp-for="AnimalsFound.FurPattern" class="form-control" />
                 </div>
             </div>
 

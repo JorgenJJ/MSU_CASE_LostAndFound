@@ -13,7 +13,7 @@ namespace MSU_Case_LostAndFound.Pages
 {
     public class FoundModel : PageModel
     {
-        public IEnumerable<AnimalsLost> AnimalLst { get; set; }
+        public IEnumerable<AnimalsFound> AnimalLst { get; set; }
         //public string CurrentFilter { get; set; }
 
 
@@ -24,14 +24,14 @@ namespace MSU_Case_LostAndFound.Pages
         }
 
         [BindProperty]
-        public AnimalsLost AnimalsFound { get; set; }
+        public AnimalsFound AnimalsFound { get; set; }
         public async Task OnGetAsync(string searchString, string searchAnimal)
         {
 
             //CurrentFilter = searchString;
 
-            IQueryable<AnimalsLost> studentsIQ = from s in _db.AnimalsLost
-                                                 select s;
+            IQueryable<AnimalsFound> studentsIQ = from s in _db.AnimalsFound
+                                                  select s;
 
             if (!String.IsNullOrEmpty(searchString))
             {
