@@ -171,6 +171,15 @@ body {
 
 .img-animal-thumbnail {
     width: 100%;
-    height: inherit;
+    height: 100%;
     object-fit: cover;
+}
+
+.profile-box {
+    width: 30%;
+    height: 150px;
+}
+
+.filter-box {
+    width: 150px;
 }
