@@ -1,7 +1,7 @@
 ﻿@page
 @model LostModel
 @{
-    ViewData["Title"] = "Dyr som er savnet";
+    ViewData["Title"] = "Missing animals";
 
 
     int totalItems = Model.AnimalLst.Count();
@@ -16,7 +16,7 @@
     </div>
     <div class="w-50 d-flex justify-content-end align-content-end">
         <a asp-area="" asp-page="/RegisterLost">
-            <div class="btn btn-primary">Ny annonse</div>
+            <div class="btn btn-primary">New registration</div>
         </a>
     </div>
 </div>

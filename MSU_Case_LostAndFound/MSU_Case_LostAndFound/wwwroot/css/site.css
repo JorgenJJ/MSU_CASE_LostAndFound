@@ -68,8 +68,8 @@ a {
 
 .btn-primary {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: #000000;
+  border-color: #222222;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -182,4 +182,9 @@ body {
 
 .filter-box {
     width: 150px;
+}
+
+.user-icon {
+    height: 25px;
+    width: 25px;
 }

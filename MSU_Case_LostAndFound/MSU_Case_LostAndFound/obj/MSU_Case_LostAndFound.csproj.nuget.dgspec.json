@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj": {}
+    "C:\\Users\\jjarnes\\OneDrive - Communicate Norge AS\\MSU\\Case\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj": {}
   },
   "projects": {
-    "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj": {
+    "C:\\Users\\jjarnes\\OneDrive - Communicate Norge AS\\MSU\\Case\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj",
+        "projectUniqueName": "C:\\Users\\jjarnes\\OneDrive - Communicate Norge AS\\MSU\\Case\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj",
         "projectName": "MSU_Case_LostAndFound",
-        "projectPath": "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj",
-        "packagesPath": "C:\\Users\\patrick.grove\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\patrick.grove\\Desktop\\Github\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\obj\\",
+        "projectPath": "C:\\Users\\jjarnes\\OneDrive - Communicate Norge AS\\MSU\\Case\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound.csproj",
+        "packagesPath": "C:\\Users\\jjarnes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jjarnes\\OneDrive - Communicate Norge AS\\MSU\\Case\\MSU_CASE_LostAndFound\\MSU_Case_LostAndFound\\MSU_Case_LostAndFound\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\patrick.grove\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jjarnes\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
