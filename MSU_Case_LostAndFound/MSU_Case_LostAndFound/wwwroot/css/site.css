@@ -183,3 +183,8 @@ body {
 .filter-box {
     width: 150px;
 }
+
+.user-icon {
+    height: 25px;
+    width: 25px;
+}
