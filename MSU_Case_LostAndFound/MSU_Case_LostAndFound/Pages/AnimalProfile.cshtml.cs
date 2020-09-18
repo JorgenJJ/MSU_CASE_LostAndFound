@@ -43,7 +43,7 @@ namespace MSU_Case_LostAndFound.Pages
 
             var user = await _userManager.FindByIdAsync(animal.UserId);
 
-            userName = user.firstname + user.lastname;
+            userName = user.firstname + " " + user.lastname;
             userPhoneNumber = user.PhoneNumber;
 
         }
